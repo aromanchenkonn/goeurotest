@@ -1,0 +1,45 @@
+2017-10-02 19:32:00.000 ERROR 2476 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.goeuro.esurovtsev.goeurotest.Application.main(Application.java:46)
+Caused by: com.goeuro.esurovtsev.goeurotest.ExitException: Program arguments were not correct: []
+	at com.goeuro.esurovtsev.goeurotest.Application.run(Application.java:53)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 5 common frames omitted
+
+2017-10-02 19:32:53.807 ERROR 4704 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:803)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:784)
+	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:134)
+	at com.goeuro.esurovtsev.goeurotest.Application.main(Application.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:54)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:104)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:61)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52)
+Caused by: com.goeuro.esurovtsev.goeurotest.ExitException: org.springframework.web.client.HttpClientErrorException: 406 Not Acceptable
+	at com.goeuro.esurovtsev.goeurotest.Application.run(Application.java:70)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	... 13 common frames omitted
+Caused by: org.springframework.web.client.HttpClientErrorException: 406 Not Acceptable
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:91)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:641)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:597)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:565)
+	at org.springframework.web.client.RestTemplate.getForEntity(RestTemplate.java:298)
+	at com.goeuro.esurovtsev.goeurotest.service.GoEuroApiClient.findSuggestionsByCity(GoEuroApiClient.java:28)
+	at com.goeuro.esurovtsev.goeurotest.Application.run(Application.java:62)
+	... 14 common frames omitted
+
